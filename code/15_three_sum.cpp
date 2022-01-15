@@ -11,7 +11,7 @@ public:
         {
             second = i+1;
             third = n-1;
-            if(i>0&&nums[i] == nums[i-1])
+            if(i>0&&nums[i] == nums[i-1])//去重
                 continue;
             while(third>second){
                 ret.clear();
@@ -27,9 +27,9 @@ public:
                     ret.push_back(nums[second]);
                     ret.push_back(nums[third]);
                     ans.push_back(ret);
-                    while(second<third&&nums[second] == nums[second+1])
+                    while(second<third&&nums[second] == nums[second+1])//去重
                         second++;
-                    while(second<third&&nums[third] == nums[third-1])
+                    while(second<third&&nums[third] == nums[third-1])//去重
                         third--;
                     second++;
                     third--;
